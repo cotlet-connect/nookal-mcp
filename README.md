@@ -115,6 +115,80 @@ python3 nookal_agent.py tools     # list Cotlet.dev tools
 python3 nookal_agent.py serve     # start the stdio MCP server (same as no argument)
 ```
 
+## What you can ask your AI to do in Nookal
+
+These are real jobs Nookal users asked about. Cotlet lets ChatGPT, Claude or any MCP client do them in your own signed-in Nookal account.
+
+### Diary and waiting list
+
+#### Can ChatGPT or Claude fill a gap in my Nookal diary from the waiting list?
+
+Partly. Nookal's automations notify waitlisted patients when a cancellation opens. With Cotlet, your agent reads the waiting list for a gap you name and drafts a text for each client who wants an earlier slot. Cotlet does not send texts itself. Nothing is sent until you say yes.
+
+Ask your agent: "There is a gap on Thursday at 2pm. Who on the Nookal waiting list wants an earlier slot with that practitioner? Draft a text to each."
+
+#### Can AI list unconfirmed Nookal appointments for tomorrow?
+
+Yes. Nookal sends appointment confirmations and reminders on its own once they are set up. With Cotlet, your agent reads tomorrow's diary in your signed-in Nookal account and lists the appointments still unconfirmed with phone numbers, so reception can call.
+
+Ask your agent: "Which of tomorrow's Nookal appointments are still unconfirmed? List client, time, practitioner and phone number so reception can call."
+
+As an API endpoint: Yes. Save the check as an endpoint in Cotlet and call it every afternoon from n8n, Make or Zapier to email the list to reception.
+
+#### Can AI use the Nookal Last Attendances report to win back lapsed patients?
+
+Partly. Nookal's automations include patient recall. With Cotlet, your agent reads the Last Attendances report, lists patients last seen 6 to 12 weeks ago with no booking and drafts a check-in message for each. Cotlet does not send texts itself. Nothing is sent until you say yes.
+
+Ask your agent: "From the Nookal Last Attendances report, list patients last seen 6 to 12 weeks ago with no booking and draft a check-in message for each."
+
+As an API endpoint: Yes. Save the lapsed-patient list as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier.
+
+### Debts and NDIS budgets
+
+#### Can AI chase Nookal aged debts from NDIS, TAC and Workcover?
+
+Yes. With Cotlet, your agent runs the Ageing Debts report in your signed-in Nookal account, lists balances over 30 days, splits patients from NDIS, TAC and Workcover payers and drafts a reminder for each. Nothing is sent until you say yes.
+
+Ask your agent: "Which balances are over 30 days in the Nookal Ageing Debts report? Split patients from NDIS, TAC and Workcover payers and draft reminders."
+
+As an API endpoint: Yes. Save the ageing-debts read as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier to fill a sheet for your bookkeeper.
+
+#### Can AI warn me when an NDIS client's budget in Nookal is running low?
+
+Yes. With Cotlet, your agent reads the NDIS plans and budgets in your signed-in Nookal account and lists clients with less than 20% of the plan budget left or a plan ending this month.
+
+Ask your agent: "Which Nookal NDIS clients have less than 20% of their plan budget left or a plan ending this month? List budget left and end date."
+
+As an API endpoint: Yes. Save the budget check as an endpoint in Cotlet and call it every week from n8n, Make or Zapier to email you the clients to follow up.
+
+### Notes and performance
+
+#### Can ChatGPT check which Nookal appointments have no clinical notes?
+
+Yes. With Cotlet, your agent runs the Clinical Notes report for last week in your signed-in Nookal account and lists the attended appointments with no note, grouped by practitioner.
+
+Ask your agent: "Run the Nookal Clinical Notes report for last week. Which attended appointments still have no note, per practitioner?"
+
+As an API endpoint: Yes. Save the check as an endpoint in Cotlet and call it every Friday from n8n, Make or Zapier to send each practitioner their list.
+
+#### Can AI send me weekly practitioner KPIs from Nookal?
+
+Yes. With Cotlet, your agent reads the Business Performance report in your signed-in Nookal account and gives you last week's utilisation, new patients and rebook rate per practitioner in one short summary.
+
+Ask your agent: "Give me last week's utilisation, new patients and rebook rate per practitioner from the Nookal Business Performance report."
+
+As an API endpoint: Yes. Save the report read as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier to email you the numbers.
+
+### Client data and exports
+
+#### Can I get Nookal data into Google Sheets or my CRM without the API documentation?
+
+Yes. Nookal has no public API documentation, no Zapier app and no webhooks. With Cotlet, your agent reads a report or client list in your signed-in Nookal account and adds the rows to your Google Sheet or CRM. Nothing is added until you say yes.
+
+Ask your agent: "Export this month's new Nookal clients with name, email and referral source and add them as rows in my Google Sheet."
+
+As an API endpoint: Yes. Save the new-clients read as an endpoint in Cotlet and call it monthly from n8n, Make or Zapier to update your sheet or CRM.
+
 ## Questions from Nookal users
 
 **Does Nookal have an API?**
